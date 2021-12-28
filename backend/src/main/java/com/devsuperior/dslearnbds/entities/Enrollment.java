@@ -27,6 +27,7 @@ public class Enrollment {
 	
 	@Column(columnDefinition = "TIMESTAMP WITHOUT TIME ZONE")
 	private Instant refundMoment;
+	
 	private boolean available;
 	private boolean onlyUpdate;
 	
@@ -97,5 +98,12 @@ public class Enrollment {
 	public void setOnlyUpdate(boolean onlyUpdate) {
 		this.onlyUpdate = onlyUpdate;
 	}
-	
+
+	public Set<Lesson> getLessonsDone() {
+		return lessonsDone;
+	}
+
+	public List<Deliver> getDeliveries() {
+		return deliveries;
+	}
 }

@@ -38,6 +38,13 @@ public class User implements Serializable{
 	
 	@OneToMany(mappedBy = "user")
 	private List<Notification> notifications = new ArrayList<>();
+	
+	@OneToMany(mappedBy = "author")
+	private List<Topic> author = new ArrayList<>();
+	
+	@ManyToMany(fetch = FetchType.EAGER) //Sempre quer for buscar um usuario no banco, vai trazer também os ROLEs (é uma exigencia do spring security)
+	@JoinColumn(name = "likes")
+	private Set<Topic> likes = new HashSet<>();
 
 	public User(Long id, String name, String email, String password, Set<Role> roles) {
 		super();
@@ -90,6 +97,14 @@ public class User implements Serializable{
 
 	public List<Notification> getNotifications() {
 		return notifications;
+	}
+
+	public List<Topic> getAuthor() {
+		return author;
+	}
+
+	public Set<Topic> getLikes() {
+		return likes;
 	}
 
 	@Override
