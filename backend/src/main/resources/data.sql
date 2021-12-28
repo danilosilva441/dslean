@@ -20,4 +20,8 @@ INSERT INTO tb_offer (edition, start_Moment, end_Moment, course_id) VALUES ('1.0
 INSERT INTO tb_offer (edition, start_Moment, end_Moment, course_id) VALUES ('2.0', TIMESTAMP WITH TIME ZONE '2022-01-05T03:00:00Z', TIMESTAMP WITH TIME ZONE '2023-01-05T03:00:00Z', 2);
 
 
-INSERT INTO tb_notification (text, moment, read, route, user_id) VALUES ('Bem vindo ao Bootcamp', TIMESTAMP WITH TIME ZONE '2022-01-05T03:00:00Z', false, 'Men', 3);
+INSERT INTO tb_notification (text, moment, read, route, user_id) VALUES ('Bem vindo ao Bootcamp', TIMESTAMP WITH TIME ZONE '2022-01-05T03:00:00Z', true, '/offers/1/resource/1/sections/1', 1);
+
+INSERT INTO tb_resource (title, description, position, img_Uri, type, offer_id) VALUES ('Trilha HTML', 'Trilha principal do curso', 1, 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fpxhere.com%2Fen%2Fphoto%2F1443423&psig=AOvVaw3DbG6s9p1vrOcgKMcXGIFl&ust=1640726649812000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCLjNlZ31hPUCFQAAAAAdAAAAABAD', 1, 1);
+INSERT INTO tb_resource (title, description, position, img_Uri, type, offer_id) VALUES ('Forum', 'Tire suas dúvidas', 2, 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fpxhere.com%2Fen%2Fphoto%2F1443423&psig=AOvVaw3DbG6s9p1vrOcgKMcXGIFl&ust=1640726649812000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCLjNlZ31hPUCFQAAAAAdAAAAABAD', 2, 1);
+INSERT INTO tb_resource (title, description, position, img_Uri, type, offer_id) VALUES ('Lives', 'Lives exclusivas para a turma', 3, 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fpxhere.com%2Fen%2Fphoto%2F1443423&psig=AOvVaw3DbG6s9p1vrOcgKMcXGIFl&ust=1640726649812000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCLjNlZ31hPUCFQAAAAAdAAAAABAD', 0, 1);
