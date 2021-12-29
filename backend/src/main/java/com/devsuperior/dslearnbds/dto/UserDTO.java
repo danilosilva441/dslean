@@ -2,8 +2,6 @@ package com.devsuperior.dslearnbds.dto;
 
 import java.io.Serializable;
 
-import javax.persistence.Column;
-
 import com.devsuperior.dslearnbds.entities.User;
 
 public class UserDTO implements Serializable {
@@ -11,8 +9,6 @@ public class UserDTO implements Serializable {
 	
 	private Long id;
 	private String name;
-
-	@Column(unique = true)
 	private String email;
 	
 	public UserDTO() {
